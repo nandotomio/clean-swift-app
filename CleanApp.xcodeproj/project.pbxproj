@@ -15,6 +15,12 @@
 		EBB3A6E02825747B0049ABED /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6B928256D7D0049ABED /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBCB224828343139006D3411 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCB224028343139006D3411 /* Infra.framework */; };
 		EBCB224D28343139006D3411 /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB224C28343139006D3411 /* AlamofireAdapterTests.swift */; };
+		EBCB225528343211006D3411 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
+		EBCB225628343211006D3411 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBCB225A2834323C006D3411 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
+		EBCB225B28343248006D3411 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CD2829BDF200688DDE /* TestFactories.swift */; };
+		EBCB225E283435BC006D3411 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EBCB225D283435BC006D3411 /* Alamofire */; };
+		EBCB2260283435F0006D3411 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EBCB225F283435F0006D3411 /* Alamofire */; };
 		EBF5B0B828298D0400688DDE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B728298D0400688DDE /* Model.swift */; };
 		EBF5B0BA28298DD400688DDE /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B928298DD400688DDE /* RemoteAddAccount.swift */; };
 		EBF5B0BC28298E3D00688DDE /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0BB28298E3D00688DDE /* HttpPostClient.swift */; };
@@ -49,6 +55,13 @@
 			remoteGlobalIDString = EBCB223F28343139006D3411;
 			remoteInfo = Infra;
 		};
+		EBCB225728343211006D3411 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3A6C8282574160049ABED;
+			remoteInfo = Data;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +72,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EBB3A6E02825747B0049ABED /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCB225928343211006D3411 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EBCB225628343211006D3411 /* Data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCB225E283435BC006D3411 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCB225528343211006D3411 /* Data.framework in Frameworks */,
+				EBCB2260283435F0006D3411 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +350,9 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				EBCB225D283435BC006D3411 /* Alamofire */,
+			);
 			productName = Domain;
 			productReference = EBB3A6B928256D7D0049ABED /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -373,12 +403,17 @@
 				EBCB223C28343139006D3411 /* Sources */,
 				EBCB223D28343139006D3411 /* Frameworks */,
 				EBCB223E28343139006D3411 /* Resources */,
+				EBCB225928343211006D3411 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBCB225828343211006D3411 /* PBXTargetDependency */,
 			);
 			name = Infra;
+			packageProductDependencies = (
+				EBCB225F283435F0006D3411 /* Alamofire */,
+			);
 			productName = Infra;
 			productReference = EBCB224028343139006D3411 /* Infra.framework */;
 			productType = "com.apple.product-type.framework";
@@ -439,6 +474,9 @@
 				Base,
 			);
 			mainGroup = EBB3A69428256AD10049ABED;
+			packageReferences = (
+				EBCB225C283435BC006D3411 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EBB3A69F28256AD10049ABED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -536,7 +574,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCB225B28343248006D3411 /* TestFactories.swift in Sources */,
 				EBCB224D28343139006D3411 /* AlamofireAdapterTests.swift in Sources */,
+				EBCB225A2834323C006D3411 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +597,11 @@
 			isa = PBXTargetDependency;
 			target = EBCB223F28343139006D3411 /* Infra */;
 			targetProxy = EBCB224928343139006D3411 /* PBXContainerItemProxy */;
+		};
+		EBCB225828343211006D3411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3A6C8282574160049ABED /* Data */;
+			targetProxy = EBCB225728343211006D3411 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -985,6 +1030,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBCB225C283435BC006D3411 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBCB225D283435BC006D3411 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBCB225C283435BC006D3411 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		EBCB225F283435F0006D3411 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBCB225C283435BC006D3411 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBB3A69528256AD10049ABED /* Project object */;
 }
