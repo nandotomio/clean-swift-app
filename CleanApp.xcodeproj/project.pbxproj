@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EB701414283AE999001576FE /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701413283AE999001576FE /* AlamofireAdapter.swift */; };
 		EB701418283AEB1C001576FE /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701417283AEB1C001576FE /* URLProtocolStub.swift */; };
+		EB701420283AF037001576FE /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */; };
+		EB701421283AF037001576FE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
 		EBB3A6C1282570FB0049ABED /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C0282570FB0049ABED /* AddAccount.swift */; };
 		EBB3A6C32825733F0049ABED /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C22825733F0049ABED /* AccountModel.swift */; };
 		EBB3A6D1282574160049ABED /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
@@ -36,6 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EB701422283AF037001576FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3A6C8282574160049ABED;
+			remoteInfo = Data;
+		};
+		EB701427283AF05E001576FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3A6B828256D7D0049ABED;
+			remoteInfo = Domain;
+		};
+		EB701429283AF05E001576FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBCB223F28343139006D3411;
+			remoteInfo = Infra;
+		};
 		EBB3A6D2282574160049ABED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
@@ -94,6 +117,8 @@
 /* Begin PBXFileReference section */
 		EB701413283AE999001576FE /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		EB701417283AEB1C001576FE /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		EB70141D283AF037001576FE /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		EBB3A6B928256D7D0049ABED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3A6C0282570FB0049ABED /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		EBB3A6C22825733F0049ABED /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -116,6 +141,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EB70141A283AF037001576FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB701421283AF037001576FE /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB3A6B628256D7D0049ABED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,6 +210,14 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
+		EB70141E283AF037001576FE /* UseCasesIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */,
+			);
+			path = UseCasesIntegrationTests;
+			sourceTree = "<group>";
+		};
 		EBB3A69428256AD10049ABED = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +226,7 @@
 				EBB3A6D4282574160049ABED /* DataTests */,
 				EBCB224128343139006D3411 /* Infra */,
 				EBCB224B28343139006D3411 /* InfraTests */,
+				EB70141E283AF037001576FE /* UseCasesIntegrationTests */,
 				EBB3A69F28256AD10049ABED /* Products */,
 				EBB3A6DE2825747B0049ABED /* Frameworks */,
 			);
@@ -198,6 +240,7 @@
 				EBB3A6D0282574160049ABED /* DataTests.xctest */,
 				EBCB224028343139006D3411 /* Infra.framework */,
 				EBCB224728343139006D3411 /* InfraTests.xctest */,
+				EB70141D283AF037001576FE /* UseCasesIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -358,6 +401,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EB70141C283AF037001576FE /* UseCasesIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB701424283AF037001576FE /* Build configuration list for PBXNativeTarget "UseCasesIntegrationTests" */;
+			buildPhases = (
+				EB701419283AF037001576FE /* Sources */,
+				EB70141A283AF037001576FE /* Frameworks */,
+				EB70141B283AF037001576FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB701428283AF05E001576FE /* PBXTargetDependency */,
+				EB70142A283AF05E001576FE /* PBXTargetDependency */,
+				EB701423283AF037001576FE /* PBXTargetDependency */,
+			);
+			name = UseCasesIntegrationTests;
+			productName = UseCasesIntegrationTests;
+			productReference = EB70141D283AF037001576FE /* UseCasesIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EBB3A6B828256D7D0049ABED /* Domain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB3A6BD28256D7D0049ABED /* Build configuration list for PBXNativeTarget "Domain" */;
@@ -468,6 +531,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					EB70141C283AF037001576FE = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					EBB3A6B828256D7D0049ABED = {
 						CreatedOnToolsVersion = 13.3.1;
 						LastSwiftMigration = 1330;
@@ -509,11 +575,19 @@
 				EBB3A6CF282574160049ABED /* DataTests */,
 				EBCB223F28343139006D3411 /* Infra */,
 				EBCB224628343139006D3411 /* InfraTests */,
+				EB70141C283AF037001576FE /* UseCasesIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EB70141B283AF037001576FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB3A6B728256D7D0049ABED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,6 +626,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EB701419283AF037001576FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB701420283AF037001576FE /* AddAccountIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB3A6B528256D7D0049ABED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,6 +690,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EB701423283AF037001576FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3A6C8282574160049ABED /* Data */;
+			targetProxy = EB701422283AF037001576FE /* PBXContainerItemProxy */;
+		};
+		EB701428283AF05E001576FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3A6B828256D7D0049ABED /* Domain */;
+			targetProxy = EB701427283AF05E001576FE /* PBXContainerItemProxy */;
+		};
+		EB70142A283AF05E001576FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBCB223F28343139006D3411 /* Infra */;
+			targetProxy = EB701429283AF05E001576FE /* PBXContainerItemProxy */;
+		};
 		EBB3A6D3282574160049ABED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBB3A6C8282574160049ABED /* Data */;
@@ -631,6 +728,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EB701425283AF037001576FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MacBook.UseCasesIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EB701426283AF037001576FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MacBook.UseCasesIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		EBB3A6A328256AD10049ABED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1005,6 +1134,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EB701424283AF037001576FE /* Build configuration list for PBXNativeTarget "UseCasesIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB701425283AF037001576FE /* Debug */,
+				EB701426283AF037001576FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBB3A69828256AD10049ABED /* Build configuration list for PBXProject "CleanApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
