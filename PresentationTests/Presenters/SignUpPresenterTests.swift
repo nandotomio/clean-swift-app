@@ -1,5 +1,6 @@
 import XCTest
 import Presentation
+import Domain
 
 class SignUpPresenterTests: XCTestCase {
     func test_signUp_should_show_error_msg_if_name_is_not_provided() {
@@ -53,11 +54,18 @@ class SignUpPresenterTests: XCTestCase {
         sut.signUp(viewModel: makeSignUpViewModel(email: "invalid_email@mail.com"))
         XCTAssertEqual(alertViewSpy.viewModel, makeInvalidAlertViewModel(fieldName: "Email"))
     }
+    
+    func test_signUp_should_call_addAccount_with_correct_values() {
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
+    }
 }
 
 extension SignUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy()) -> SignUpPresenter {
-        return SignUpPresenter(alertView: alertView, emailValidator: emailValidator)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SignUpPresenter {
+        return SignUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
     }
     
     func makeSignUpViewModel(name: String? = "any_name", email: String? = "any_email@mail.com", password: String? = "any_password", passwordConfirmation: String? = "any_password") -> SignUpViewModel {
@@ -91,6 +99,14 @@ extension SignUpPresenterTests {
         
         func simulateInvalidEmail() {
             self.result = false
+        }
+    }
+    
+    class AddAccountSpy: AddAccount {
+        var addAccountModel: AddAccountModel?
+        
+        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+            self.addAccountModel = addAccountModel
         }
     }
 }
