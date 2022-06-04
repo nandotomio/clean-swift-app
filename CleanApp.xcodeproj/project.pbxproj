@@ -15,6 +15,7 @@
 		EB2302DE284BDCFB0087790D /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302DD284BDCFB0087790D /* AlertView.swift */; };
 		EB2302E3284BE0B20087790D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302E2284BE0B20087790D /* EmailValidator.swift */; };
 		EB2302E4284BF8550087790D /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0D22829BE9800688DDE /* AccountModelFactory.swift */; };
+		EB2302E5284C024E0087790D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
 		EB701414283AE999001576FE /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701413283AE999001576FE /* AlamofireAdapter.swift */; };
 		EB701418283AEB1C001576FE /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701417283AEB1C001576FE /* URLProtocolStub.swift */; };
 		EB701420283AF037001576FE /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */; };
@@ -818,6 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2302E4284BF8550087790D /* AccountModelFactory.swift in Sources */,
+				EB2302E5284C024E0087790D /* TestExtensions.swift in Sources */,
 				EB2302CD284BD4340087790D /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
