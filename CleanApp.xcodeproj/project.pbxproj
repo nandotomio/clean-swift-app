@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		EB2302C8284BD4340087790D /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2302C0284BD4340087790D /* Presentation.framework */; };
 		EB2302CD284BD4340087790D /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */; };
+		EB2302D6284BDC520087790D /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302D5284BDC520087790D /* SignUpPresenter.swift */; };
+		EB2302D7284BDC7A0087790D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6B928256D7D0049ABED /* Domain.framework */; };
+		EB2302D8284BDC7A0087790D /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6B928256D7D0049ABED /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB2302DE284BDCFB0087790D /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302DD284BDCFB0087790D /* AlertView.swift */; };
 		EB701414283AE999001576FE /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701413283AE999001576FE /* AlamofireAdapter.swift */; };
 		EB701418283AEB1C001576FE /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB701417283AEB1C001576FE /* URLProtocolStub.swift */; };
 		EB701420283AF037001576FE /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */; };
@@ -46,6 +50,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = EB2302BF284BD4340087790D;
 			remoteInfo = Presentation;
+		};
+		EB2302D9284BDC7A0087790D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB3A69528256AD10049ABED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3A6B828256D7D0049ABED;
+			remoteInfo = Domain;
 		};
 		EB701422283AF037001576FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,6 +110,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EB2302DB284BDC7A0087790D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB2302D8284BDC7A0087790D /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB3A6E32825747B0049ABED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +149,8 @@
 		EB2302C0284BD4340087790D /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2302C7284BD4340087790D /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		EB2302D5284BDC520087790D /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		EB2302DD284BDCFB0087790D /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EB701413283AE999001576FE /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		EB701417283AEB1C001576FE /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		EB70141D283AF037001576FE /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2302D7284BDC7A0087790D /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +248,8 @@
 		EB2302C1284BD4340087790D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EB2302DC284BDCEB0087790D /* Views */,
+				EB2302DF284BDD130087790D /* Presenters */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -230,9 +257,33 @@
 		EB2302CB284BD4340087790D /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */,
+				EB2302E0284BDE480087790D /* Presenters */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		EB2302DC284BDCEB0087790D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB2302DD284BDCFB0087790D /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB2302DF284BDD130087790D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EB2302D5284BDC520087790D /* SignUpPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EB2302E0284BDE480087790D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		EB701415283AEA91001576FE /* Http */ = {
@@ -462,10 +513,12 @@
 				EB2302BC284BD4340087790D /* Sources */,
 				EB2302BD284BD4340087790D /* Frameworks */,
 				EB2302BE284BD4340087790D /* Resources */,
+				EB2302DB284BDC7A0087790D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EB2302DA284BDC7A0087790D /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -622,6 +675,7 @@
 				TargetAttributes = {
 					EB2302BF284BD4340087790D = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					EB2302C6284BD4340087790D = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -741,6 +795,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2302D6284BDC520087790D /* SignUpPresenter.swift in Sources */,
+				EB2302DE284BDCFB0087790D /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +877,11 @@
 			target = EB2302BF284BD4340087790D /* Presentation */;
 			targetProxy = EB2302C9284BD4340087790D /* PBXContainerItemProxy */;
 		};
+		EB2302DA284BDC7A0087790D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3A6B828256D7D0049ABED /* Domain */;
+			targetProxy = EB2302D9284BDC7A0087790D /* PBXContainerItemProxy */;
+		};
 		EB701423283AF037001576FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBB3A6C8282574160049ABED /* Data */;
@@ -862,6 +923,7 @@
 		EB2302CF284BD4340087790D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -884,6 +946,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -891,6 +954,7 @@
 		EB2302D0284BD4340087790D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -920,6 +984,7 @@
 		EB2302D1284BD4340087790D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -936,6 +1001,7 @@
 		EB2302D2284BD4340087790D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
