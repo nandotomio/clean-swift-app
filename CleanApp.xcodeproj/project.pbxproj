@@ -21,6 +21,7 @@
 		EB701420283AF037001576FE /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */; };
 		EB701421283AF037001576FE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
 		EB994631284D22CE009C1D9E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994630284D22CE009C1D9E /* LoadingView.swift */; };
+		EB994634284D2DE5009C1D9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994633284D2DE5009C1D9E /* SignUpViewModel.swift */; };
 		EBB3A6C1282570FB0049ABED /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C0282570FB0049ABED /* AddAccount.swift */; };
 		EBB3A6C32825733F0049ABED /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C22825733F0049ABED /* AccountModel.swift */; };
 		EBB3A6D1282574160049ABED /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
@@ -161,6 +162,7 @@
 		EB70141D283AF037001576FE /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		EB994630284D22CE009C1D9E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EB994633284D2DE5009C1D9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EBB3A6B928256D7D0049ABED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3A6C0282570FB0049ABED /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		EBB3A6C22825733F0049ABED /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -281,7 +283,7 @@
 		EB2302DF284BDD130087790D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				EB2302D5284BDC520087790D /* SignUpPresenter.swift */,
+				EB994632284D2DD7009C1D9E /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -325,6 +327,15 @@
 				EB70141F283AF037001576FE /* AddAccountIntegrationTests.swift */,
 			);
 			path = UseCasesIntegrationTests;
+			sourceTree = "<group>";
+		};
+		EB994632284D2DD7009C1D9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB2302D5284BDC520087790D /* SignUpPresenter.swift */,
+				EB994633284D2DE5009C1D9E /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		EBB3A69428256AD10049ABED = {
@@ -813,6 +824,7 @@
 			files = (
 				EB2302D6284BDC520087790D /* SignUpPresenter.swift in Sources */,
 				EB994631284D22CE009C1D9E /* LoadingView.swift in Sources */,
+				EB994634284D2DE5009C1D9E /* SignUpViewModel.swift in Sources */,
 				EB2302DE284BDCFB0087790D /* AlertView.swift in Sources */,
 				EB2302E3284BE0B20087790D /* EmailValidator.swift in Sources */,
 			);
