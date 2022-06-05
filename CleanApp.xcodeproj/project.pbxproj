@@ -34,6 +34,7 @@
 		EB994661284D3441009C1D9E /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB2302C0284BD4340087790D /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB994666284D3669009C1D9E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994665284D3669009C1D9E /* SignUpViewController.swift */; };
 		EB99466A284D3854009C1D9E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB994669284D3854009C1D9E /* SignUp.storyboard */; };
+		EB994671284D48A9009C1D9E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994670284D48A9009C1D9E /* TestExtensions.swift */; };
 		EBB3A6C1282570FB0049ABED /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C0282570FB0049ABED /* AddAccount.swift */; };
 		EBB3A6C32825733F0049ABED /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C22825733F0049ABED /* AccountModel.swift */; };
 		EBB3A6D1282574160049ABED /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
@@ -211,6 +212,7 @@
 		EB994657284D3301009C1D9E /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		EB994665284D3669009C1D9E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EB994669284D3854009C1D9E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		EB994670284D48A9009C1D9E /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		EBB3A6B928256D7D0049ABED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3A6C0282570FB0049ABED /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		EBB3A6C22825733F0049ABED /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 		EB994656284D3301009C1D9E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				EB99466F284D488C009C1D9E /* Helpers */,
 				EB99466E284D4869009C1D9E /* Scenes */,
 			);
 			path = UITests;
@@ -495,6 +498,14 @@
 				EB99466C284D4832009C1D9E /* SignUp */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EB99466F284D488C009C1D9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB994670284D48A9009C1D9E /* TestExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		EBB3A69428256AD10049ABED = {
@@ -1099,6 +1110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB994658284D3301009C1D9E /* SignUpViewControllerTests.swift in Sources */,
+				EB994671284D48A9009C1D9E /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
