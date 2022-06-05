@@ -451,8 +451,7 @@
 		EB99464C284D3301009C1D9E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				EB994665284D3669009C1D9E /* SignUpViewController.swift */,
-				EB994669284D3854009C1D9E /* SignUp.storyboard */,
+				EB99466D284D4861009C1D9E /* Scenes */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -460,9 +459,42 @@
 		EB994656284D3301009C1D9E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				EB994657284D3301009C1D9E /* SignUpViewControllerTests.swift */,
+				EB99466E284D4869009C1D9E /* Scenes */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		EB99466B284D4824009C1D9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB994665284D3669009C1D9E /* SignUpViewController.swift */,
+				EB994669284D3854009C1D9E /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EB99466C284D4832009C1D9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB994657284D3301009C1D9E /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EB99466D284D4861009C1D9E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EB99466B284D4824009C1D9E /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EB99466E284D4869009C1D9E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EB99466C284D4832009C1D9E /* SignUp */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		EBB3A69428256AD10049ABED = {
