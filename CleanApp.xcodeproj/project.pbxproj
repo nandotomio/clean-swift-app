@@ -23,6 +23,11 @@
 		EB994631284D22CE009C1D9E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994630284D22CE009C1D9E /* LoadingView.swift */; };
 		EB994634284D2DE5009C1D9E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994633284D2DE5009C1D9E /* SignUpViewModel.swift */; };
 		EB994636284D2E4F009C1D9E /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994635284D2E4F009C1D9E /* SignUpMapper.swift */; };
+		EB99463A284D2F85009C1D9E /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994639284D2F85009C1D9E /* AlertViewSpy.swift */; };
+		EB99463D284D2FB7009C1D9E /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99463C284D2FB7009C1D9E /* EmailValidatorSpy.swift */; };
+		EB994640284D2FE4009C1D9E /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */; };
+		EB994642284D3003009C1D9E /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994641284D3003009C1D9E /* LoadingViewSpy.swift */; };
+		EB994645284D30F3009C1D9E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994644284D30F3009C1D9E /* TestFactories.swift */; };
 		EBB3A6C1282570FB0049ABED /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C0282570FB0049ABED /* AddAccount.swift */; };
 		EBB3A6C32825733F0049ABED /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C22825733F0049ABED /* AccountModel.swift */; };
 		EBB3A6D1282574160049ABED /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
@@ -165,6 +170,11 @@
 		EB994630284D22CE009C1D9E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EB994633284D2DE5009C1D9E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EB994635284D2E4F009C1D9E /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
+		EB994639284D2F85009C1D9E /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
+		EB99463C284D2FB7009C1D9E /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
+		EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
+		EB994641284D3003009C1D9E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
+		EB994644284D30F3009C1D9E /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		EBB3A6B928256D7D0049ABED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3A6C0282570FB0049ABED /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		EBB3A6C22825733F0049ABED /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -268,6 +278,10 @@
 		EB2302CB284BD4340087790D /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB994643284D30E1009C1D9E /* Helpers */,
+				EB99463E284D2FD7009C1D9E /* UseCases */,
+				EB99463B284D2FAE009C1D9E /* Validators */,
+				EB994638284D2F6D009C1D9E /* Views */,
 				EB2302E0284BDE480087790D /* Presenters */,
 			);
 			path = PresentationTests;
@@ -293,7 +307,7 @@
 		EB2302E0284BDE480087790D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */,
+				EB994637284D2F2B009C1D9E /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -339,6 +353,47 @@
 				EB994635284D2E4F009C1D9E /* SignUpMapper.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EB994637284D2F2B009C1D9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EB994638284D2F6D009C1D9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB994639284D2F85009C1D9E /* AlertViewSpy.swift */,
+				EB994641284D3003009C1D9E /* LoadingViewSpy.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB99463B284D2FAE009C1D9E /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				EB99463C284D2FB7009C1D9E /* EmailValidatorSpy.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		EB99463E284D2FD7009C1D9E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		EB994643284D30E1009C1D9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB994644284D30F3009C1D9E /* TestFactories.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		EBB3A69428256AD10049ABED = {
@@ -838,8 +893,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB994642284D3003009C1D9E /* LoadingViewSpy.swift in Sources */,
+				EB994640284D2FE4009C1D9E /* AddAccountSpy.swift in Sources */,
+				EB99463A284D2F85009C1D9E /* AlertViewSpy.swift in Sources */,
 				EB2302E4284BF8550087790D /* AccountModelFactory.swift in Sources */,
+				EB99463D284D2FB7009C1D9E /* EmailValidatorSpy.swift in Sources */,
 				EB2302E5284C024E0087790D /* TestExtensions.swift in Sources */,
+				EB994645284D30F3009C1D9E /* TestFactories.swift in Sources */,
 				EB2302CD284BD4340087790D /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
