@@ -16,12 +16,12 @@ class SignUpViewControllerTests: XCTestCase {
         XCTAssertNotNil(makeSut() as AlertView)
     }
     
-    func test_saveButton_calls_signUp_on_tap() throws {
+    func test_saveButton_calls_signUp_on_touch() throws {
         var callsCount = 0
         let sut = makeSut(signUpSpy: { _ in
             callsCount += 1
         })
-        sut.saveButton?.simulateTap()
+        sut.saveButton?.simulateTouch()
         XCTAssertEqual(callsCount, 1)
     }
 }
@@ -45,7 +45,7 @@ extension UIControl {
         }
     }
     
-    func simulateTap() {
+    func simulateTouch() {
         simulate(event: .touchUpInside)
     }
 }

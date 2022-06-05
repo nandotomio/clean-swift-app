@@ -14,10 +14,10 @@ final class SignUpViewController: UIViewController {
     }
     
     private func configure() {
-        saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        saveButton?.addTarget(self, action: #selector(saveButtonTouched), for: .touchUpInside)
     }
     
-    @objc private func saveButtonTapped() {
+    @objc private func saveButtonTouched() {
         signUp?(SignUpViewModel(name: nil, email: nil, password: nil, passwordConfirmation: nil))
     }
 }
