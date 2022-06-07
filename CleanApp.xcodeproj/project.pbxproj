@@ -58,7 +58,6 @@
 		EB9946DD284E6FC4009C1D9E /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB99464B284D3301009C1D9E /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB9946E0284E6FC4009C1D9E /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99467C284D6384009C1D9E /* Validation.framework */; platformFilter = ios; };
 		EB9946E1284E6FC4009C1D9E /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB99467C284D6384009C1D9E /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EB9946E7284E7046009C1D9E /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9946E6284E7046009C1D9E /* ControllerFactory.swift */; };
 		EBB3A6C1282570FB0049ABED /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C0282570FB0049ABED /* AddAccount.swift */; };
 		EBB3A6C32825733F0049ABED /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3A6C22825733F0049ABED /* AccountModel.swift */; };
 		EBB3A6D1282574160049ABED /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB3A6C9282574160049ABED /* Data.framework */; };
@@ -347,7 +346,6 @@
 		EB9946AA284E6DB4009C1D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB9946AC284E6DB4009C1D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9946B1284E6DB4009C1D9E /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9946E6284E7046009C1D9E /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		EBB3A6B928256D7D0049ABED /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3A6C0282570FB0049ABED /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		EBB3A6C22825733F0049ABED /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -736,7 +734,6 @@
 		EB9946E5284E7034009C1D9E /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				EB9946E6284E7046009C1D9E /* ControllerFactory.swift */,
 				EBEC8FF8284ECA3000932CDF /* UseCaseFactory.swift */,
 			);
 			path = Factories;
@@ -1535,7 +1532,6 @@
 			files = (
 				EBEC8FF9284ECA3000932CDF /* UseCaseFactory.swift in Sources */,
 				EB99469F284E6DB3009C1D9E /* AppDelegate.swift in Sources */,
-				EB9946E7284E7046009C1D9E /* ControllerFactory.swift in Sources */,
 				EB9946A1284E6DB3009C1D9E /* SceneDelegate.swift in Sources */,
 				EBEC9003284ECF0C00932CDF /* WeakVarProxy.swift in Sources */,
 				EBEC8FFC284ECA9A00932CDF /* SignUpComposer.swift in Sources */,
