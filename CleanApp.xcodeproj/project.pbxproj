@@ -79,6 +79,7 @@
 		EBEC8FFF284ECC6200932CDF /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */; };
 		EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
 		EBEC9003284ECF0C00932CDF /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC9002284ECF0C00932CDF /* WeakVarProxy.swift */; };
+		EBEC9008284ED26C00932CDF /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC9007284ED26C00932CDF /* Environment.swift */; };
 		EBF5B0B828298D0400688DDE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B728298D0400688DDE /* Model.swift */; };
 		EBF5B0BA28298DD400688DDE /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B928298DD400688DDE /* RemoteAddAccount.swift */; };
 		EBF5B0BC28298E3D00688DDE /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0BB28298E3D00688DDE /* HttpPostClient.swift */; };
@@ -359,6 +360,9 @@
 		EBEC8FFB284ECA9A00932CDF /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		EBEC8FFD284ECBD500932CDF /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		EBEC9002284ECF0C00932CDF /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
+		EBEC9005284ED18600932CDF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		EBEC9006284ED1F000932CDF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		EBEC9007284ED26C00932CDF /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		EBF5B0B728298D0400688DDE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EBF5B0B928298DD400688DDE /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		EBF5B0BB28298E3D00688DDE /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -711,6 +715,7 @@
 		EB99469D284E6DB3009C1D9E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EBEC9004284ED16F00932CDF /* Env */,
 				EBEC9001284ECEFD00932CDF /* Proxies */,
 				EBEC8FFA284ECA8E00932CDF /* Composers */,
 				EB9946E5284E7034009C1D9E /* Factories */,
@@ -849,6 +854,16 @@
 				EBEC9002284ECF0C00932CDF /* WeakVarProxy.swift */,
 			);
 			path = Proxies;
+			sourceTree = "<group>";
+		};
+		EBEC9004284ED16F00932CDF /* Env */ = {
+			isa = PBXGroup;
+			children = (
+				EBEC9007284ED26C00932CDF /* Environment.swift */,
+				EBEC9005284ED18600932CDF /* Debug.xcconfig */,
+				EBEC9006284ED1F000932CDF /* Release.xcconfig */,
+			);
+			path = Env;
 			sourceTree = "<group>";
 		};
 		EBF5B0BD28298EB800688DDE /* UseCases */ = {
@@ -1531,6 +1546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBEC8FF9284ECA3000932CDF /* UseCaseFactory.swift in Sources */,
+				EBEC9008284ED26C00932CDF /* Environment.swift in Sources */,
 				EB99469F284E6DB3009C1D9E /* AppDelegate.swift in Sources */,
 				EB9946A1284E6DB3009C1D9E /* SceneDelegate.swift in Sources */,
 				EBEC9003284ECF0C00932CDF /* WeakVarProxy.swift in Sources */,
@@ -2057,6 +2073,7 @@
 		};
 		EB9946C4284E6DB4009C1D9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBEC9005284ED18600932CDF /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2084,6 +2101,7 @@
 		};
 		EB9946C5284E6DB4009C1D9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBEC9006284ED1F000932CDF /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
