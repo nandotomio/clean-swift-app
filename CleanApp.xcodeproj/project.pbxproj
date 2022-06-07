@@ -76,6 +76,9 @@
 		EBEC8FF7284E760A00932CDF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EBEC8FF6284E760A00932CDF /* Alamofire */; };
 		EBEC8FF9284ECA3000932CDF /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FF8284ECA3000932CDF /* UseCaseFactory.swift */; };
 		EBEC8FFC284ECA9A00932CDF /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FFB284ECA9A00932CDF /* SignUpComposer.swift */; };
+		EBEC8FFE284ECBD500932CDF /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FFD284ECBD500932CDF /* SignUpIntegrationTests.swift */; };
+		EBEC8FFF284ECC6200932CDF /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */; };
+		EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
 		EBF5B0B828298D0400688DDE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B728298D0400688DDE /* Model.swift */; };
 		EBF5B0BA28298DD400688DDE /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0B928298DD400688DDE /* RemoteAddAccount.swift */; };
 		EBF5B0BC28298E3D00688DDE /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0BB28298E3D00688DDE /* HttpPostClient.swift */; };
@@ -355,6 +358,7 @@
 		EBCB224C28343139006D3411 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		EBEC8FF8284ECA3000932CDF /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		EBEC8FFB284ECA9A00932CDF /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		EBEC8FFD284ECBD500932CDF /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		EBF5B0B728298D0400688DDE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EBF5B0B928298DD400688DDE /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		EBF5B0BB28298E3D00688DDE /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -721,6 +725,7 @@
 		EB9946B4284E6DB4009C1D9E /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBEC8FFD284ECBD500932CDF /* SignUpIntegrationTests.swift */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1280,6 +1285,7 @@
 					};
 					EB9946B0284E6DB4009C1D9E = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = EB99469B284E6DB3009C1D9E;
 					};
 					EBB3A6B828256D7D0049ABED = {
@@ -1528,6 +1534,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEC8FFF284ECC6200932CDF /* AddAccountSpy.swift in Sources */,
+				EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */,
+				EBEC8FFE284ECBD500932CDF /* SignUpIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2097,14 +2106,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MacBook.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Main.app/Main";
@@ -2116,10 +2132,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MacBook.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
