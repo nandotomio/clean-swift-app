@@ -19,7 +19,15 @@ public class LoginPresenter {
             authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Oops, something went wrong. Please try again later."))
+                case .failure(let error):
+                    let errorMessage: String
+                    switch error {
+                    case .expiredSession:
+                        errorMessage = "Invalid credentials."
+                    default:
+                        errorMessage = "Oops, something went wrong. Please try again later."
+                    }
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: errorMessage))
                 case .success: break
                 }
             }
