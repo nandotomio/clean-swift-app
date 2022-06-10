@@ -17,6 +17,7 @@
 		EB12DD3D2853E2DC008EEC57 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB12DD3C2853E2DC008EEC57 /* Login.storyboard */; };
 		EB12DD402853E433008EEC57 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12DD3F2853E433008EEC57 /* LoginViewControllerTests.swift */; };
 		EB12DD422853E48F008EEC57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12DD412853E48F008EEC57 /* LoginViewController.swift */; };
+		EB12DD432853E8CD008EEC57 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
 		EB2302C8284BD4340087790D /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2302C0284BD4340087790D /* Presentation.framework */; };
 		EB2302CD284BD4340087790D /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302CC284BD4340087790D /* SignUpPresenterTests.swift */; };
 		EB2302D6284BDC520087790D /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302D5284BDC520087790D /* SignUpPresenter.swift */; };
@@ -49,7 +50,7 @@
 		EB994661284D3441009C1D9E /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB2302C0284BD4340087790D /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB994666284D3669009C1D9E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994665284D3669009C1D9E /* SignUpViewController.swift */; };
 		EB99466A284D3854009C1D9E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB994669284D3854009C1D9E /* SignUp.storyboard */; };
-		EB994671284D48A9009C1D9E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994670284D48A9009C1D9E /* TestExtensions.swift */; };
+		EB994671284D48A9009C1D9E /* UITestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994670284D48A9009C1D9E /* UITestExtensions.swift */; };
 		EB994674284D52FD009C1D9E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994673284D52FD009C1D9E /* UIViewControllerExtensions.swift */; };
 		EB994676284D53F7009C1D9E /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB994675284D53F7009C1D9E /* Storyboarded.swift */; };
 		EB994684284D6385009C1D9E /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99467C284D6384009C1D9E /* Validation.framework */; };
@@ -392,7 +393,7 @@
 		EB994657284D3301009C1D9E /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		EB994665284D3669009C1D9E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EB994669284D3854009C1D9E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
-		EB994670284D48A9009C1D9E /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		EB994670284D48A9009C1D9E /* UITestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestExtensions.swift; sourceTree = "<group>"; };
 		EB994673284D52FD009C1D9E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		EB994675284D53F7009C1D9E /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EB99467C284D6384009C1D9E /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -837,7 +838,7 @@
 		EB99466F284D488C009C1D9E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EB994670284D48A9009C1D9E /* TestExtensions.swift */,
+				EB994670284D48A9009C1D9E /* UITestExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1762,7 +1763,8 @@
 			files = (
 				EB12DD402853E433008EEC57 /* LoginViewControllerTests.swift in Sources */,
 				EB994658284D3301009C1D9E /* SignUpViewControllerTests.swift in Sources */,
-				EB994671284D48A9009C1D9E /* TestExtensions.swift in Sources */,
+				EB994671284D48A9009C1D9E /* UITestExtensions.swift in Sources */,
+				EB12DD432853E8CD008EEC57 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

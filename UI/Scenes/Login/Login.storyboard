@@ -39,17 +39,17 @@
                                 <color key="textColor" red="0.33725490196078434" green="0.0" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szE-tb-I63" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szE-tb-I63" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="310" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-qb-HXE" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-qb-HXE" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="360" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBo-lJ-yZc" userLabel="Save Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBo-lJ-yZc" userLabel="Login Button">
                                 <rect key="frame" x="32" y="426" width="350" height="50"/>
                                 <color key="backgroundColor" red="0.53333333333333333" green="0.054901960784313725" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -77,16 +77,23 @@
                             <constraint firstItem="7Ef-qb-HXE" firstAttribute="top" secondItem="szE-tb-I63" secondAttribute="bottom" constant="16" id="Dnx-am-DYT"/>
                             <constraint firstItem="szE-tb-I63" firstAttribute="top" secondItem="q1X-gT-jFt" secondAttribute="bottom" constant="16" id="EX7-cH-YJn"/>
                             <constraint firstItem="nEE-lZ-M59" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Jqv-Tj-afc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="szE-tb-I63" secondAttribute="trailing" constant="32" id="MGH-NQ-WRA"/>
                             <constraint firstItem="FBo-lJ-yZc" firstAttribute="top" secondItem="7Ef-qb-HXE" secondAttribute="bottom" constant="32" id="Oht-E2-eRW"/>
+                            <constraint firstItem="szE-tb-I63" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Oof-QH-NNQ"/>
                             <constraint firstItem="7Ef-qb-HXE" firstAttribute="trailing" secondItem="szE-tb-I63" secondAttribute="trailing" id="Oqx-be-Mfh"/>
                             <constraint firstItem="7Ef-qb-HXE" firstAttribute="leading" secondItem="szE-tb-I63" secondAttribute="leading" id="Zs5-uj-IKl"/>
                             <constraint firstItem="9Fc-Iw-Lf2" firstAttribute="top" secondItem="FBo-lJ-yZc" secondAttribute="bottom" constant="16" id="cV4-co-S32"/>
+                            <constraint firstItem="FBo-lJ-yZc" firstAttribute="trailing" secondItem="szE-tb-I63" secondAttribute="trailing" id="oNT-zV-8u9"/>
                             <constraint firstItem="q1X-gT-jFt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ulg-Ht-hwf"/>
+                            <constraint firstItem="FBo-lJ-yZc" firstAttribute="leading" secondItem="szE-tb-I63" secondAttribute="leading" id="uv1-Tw-r8W"/>
                             <constraint firstItem="nEE-lZ-M59" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zLW-9Q-X7l"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="szE-tb-I63" id="MMl-9i-hDK"/>
                         <outlet property="loadingIndicator" destination="9Fc-Iw-Lf2" id="OM7-Ph-Szt"/>
+                        <outlet property="loginButton" destination="FBo-lJ-yZc" id="gQ2-Vq-vJa"/>
+                        <outlet property="passwordTextField" destination="7Ef-qb-HXE" id="QIr-6K-1HX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
