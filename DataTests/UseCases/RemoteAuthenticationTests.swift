@@ -3,11 +3,18 @@ import Domain
 import Data
 
 class RemoteAuthenticationTests: XCTestCase {
-    func test_add_should_call_httpClient_with_correct_url() {
+    func test_auth_should_call_httpClient_with_correct_url() {
         let url = makeUrl()
         let (sut, httpClientSpy) = makeSut(url: url)
-        sut.auth()
+        sut.auth(authenticationModel: makeAuthenticationModel())
         XCTAssertEqual(httpClientSpy.urls, [url])
+    }
+    
+    func test_auth_should_call_httpClient_with_correct_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let authenticationModel = makeAuthenticationModel()
+        sut.auth(authenticationModel: authenticationModel)
+        XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
     }
 }
 
