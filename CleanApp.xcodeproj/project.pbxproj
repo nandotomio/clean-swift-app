@@ -100,7 +100,7 @@
 		EBEC8FF7284E760A00932CDF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EBEC8FF6284E760A00932CDF /* Alamofire */; };
 		EBEC8FF9284ECA3000932CDF /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FF8284ECA3000932CDF /* RemoteAddAccountFactory.swift */; };
 		EBEC8FFC284ECA9A00932CDF /* SignUpControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FFB284ECA9A00932CDF /* SignUpControllerFactory.swift */; };
-		EBEC8FFE284ECBD500932CDF /* SignUpFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FFD284ECBD500932CDF /* SignUpFactoryTests.swift */; };
+		EBEC8FFE284ECBD500932CDF /* SignUpControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC8FFD284ECBD500932CDF /* SignUpControllerFactoryTests.swift */; };
 		EBEC8FFF284ECC6200932CDF /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99463F284D2FE4009C1D9E /* AddAccountSpy.swift */; };
 		EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
 		EBEC9003284ECF0C00932CDF /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC9002284ECF0C00932CDF /* WeakVarProxy.swift */; };
@@ -427,7 +427,7 @@
 		EBDD9D592851611F00B58DBF /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		EBEC8FF8284ECA3000932CDF /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		EBEC8FFB284ECA9A00932CDF /* SignUpControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactory.swift; sourceTree = "<group>"; };
-		EBEC8FFD284ECBD500932CDF /* SignUpFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactoryTests.swift; sourceTree = "<group>"; };
+		EBEC8FFD284ECBD500932CDF /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
 		EBEC9002284ECF0C00932CDF /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		EBEC9005284ED18600932CDF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		EBEC9006284ED1F000932CDF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -891,7 +891,7 @@
 		EB9946B4284E6DB4009C1D9E /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBEC9009284ED64C00932CDF /* Composers */,
+				EBEC9009284ED64C00932CDF /* Factories */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1061,12 +1061,12 @@
 			path = Env;
 			sourceTree = "<group>";
 		};
-		EBEC9009284ED64C00932CDF /* Composers */ = {
+		EBEC9009284ED64C00932CDF /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				EBEC8FFD284ECBD500932CDF /* SignUpFactoryTests.swift */,
+				EBEC8FFD284ECBD500932CDF /* SignUpControllerFactoryTests.swift */,
 			);
-			path = Composers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		EBEC900B284EDE1A00932CDF /* Decorators */ = {
@@ -1819,7 +1819,7 @@
 				EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */,
 				EBDD9D5B2851662D00B58DBF /* EmailValidatorSpy.swift in Sources */,
 				EBEC900A284ED85B00932CDF /* TestFactories.swift in Sources */,
-				EBEC8FFE284ECBD500932CDF /* SignUpFactoryTests.swift in Sources */,
+				EBEC8FFE284ECBD500932CDF /* SignUpControllerFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
