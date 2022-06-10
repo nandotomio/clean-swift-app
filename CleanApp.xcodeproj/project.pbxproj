@@ -26,6 +26,10 @@
 		EB2302DE284BDCFB0087790D /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2302DD284BDCFB0087790D /* AlertView.swift */; };
 		EB2302E4284BF8550087790D /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0D22829BE9800688DDE /* AccountModelFactory.swift */; };
 		EB2302E5284C024E0087790D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5B0CB2829BD8500688DDE /* TestExtensions.swift */; };
+		EB2D59932853EE06000FF75A /* LoginControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D59922853EE06000FF75A /* LoginControllerFactoryTests.swift */; };
+		EB2D59942853EE92000FF75A /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12DD392853DB94008EEC57 /* AuthenticationSpy.swift */; };
+		EB2D59962853EF4F000FF75A /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D59952853EF4F000FF75A /* RemoteAuthenticationFactory.swift */; };
+		EB2D59982853EFBA000FF75A /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D59972853EFBA000FF75A /* LoginControllerFactory.swift */; };
 		EB6E2737285293AE00321F14 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E2736285293AE00321F14 /* ApiUrlFactory.swift */; };
 		EB6E273A2852943600321F14 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E27392852943600321F14 /* AlamofireAdapterFactory.swift */; };
 		EB6E273E2852955F00321F14 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E273D2852955F00321F14 /* EmailValidatorAdapterFactory.swift */; };
@@ -369,6 +373,9 @@
 		EB2302D5284BDC520087790D /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		EB2302DD284BDCFB0087790D /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EB2302E2284BE0B20087790D /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		EB2D59922853EE06000FF75A /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
+		EB2D59952853EF4F000FF75A /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
+		EB2D59972853EFBA000FF75A /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		EB6E2736285293AE00321F14 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		EB6E27392852943600321F14 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		EB6E273D2852955F00321F14 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
@@ -665,6 +672,7 @@
 			children = (
 				EB6E2736285293AE00321F14 /* ApiUrlFactory.swift */,
 				EBEC8FF8284ECA3000932CDF /* RemoteAddAccountFactory.swift */,
+				EB2D59952853EF4F000FF75A /* RemoteAuthenticationFactory.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -682,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				EBEC8FFB284ECA9A00932CDF /* SignUpControllerFactory.swift */,
+				EB2D59972853EFBA000FF75A /* LoginControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1065,6 +1074,7 @@
 			isa = PBXGroup;
 			children = (
 				EBEC8FFD284ECBD500932CDF /* SignUpControllerFactoryTests.swift */,
+				EB2D59922853EE06000FF75A /* LoginControllerFactoryTests.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1804,7 +1814,9 @@
 				EBEC9008284ED26C00932CDF /* Environment.swift in Sources */,
 				EB6E2737285293AE00321F14 /* ApiUrlFactory.swift in Sources */,
 				EB99469F284E6DB3009C1D9E /* AppDelegate.swift in Sources */,
+				EB2D59962853EF4F000FF75A /* RemoteAuthenticationFactory.swift in Sources */,
 				EB9946A1284E6DB3009C1D9E /* SceneDelegate.swift in Sources */,
+				EB2D59982853EFBA000FF75A /* LoginControllerFactory.swift in Sources */,
 				EBEC9003284ECF0C00932CDF /* WeakVarProxy.swift in Sources */,
 				EB6E273E2852955F00321F14 /* EmailValidatorAdapterFactory.swift in Sources */,
 				EBEC8FFC284ECA9A00932CDF /* SignUpControllerFactory.swift in Sources */,
@@ -1817,6 +1829,8 @@
 			files = (
 				EBEC8FFF284ECC6200932CDF /* AddAccountSpy.swift in Sources */,
 				EBEC9000284ECC9800932CDF /* TestExtensions.swift in Sources */,
+				EB2D59942853EE92000FF75A /* AuthenticationSpy.swift in Sources */,
+				EB2D59932853EE06000FF75A /* LoginControllerFactoryTests.swift in Sources */,
 				EBDD9D5B2851662D00B58DBF /* EmailValidatorSpy.swift in Sources */,
 				EBEC900A284ED85B00932CDF /* TestFactories.swift in Sources */,
 				EBEC8FFE284ECBD500932CDF /* SignUpControllerFactoryTests.swift in Sources */,
