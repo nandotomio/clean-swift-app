@@ -14,7 +14,7 @@ public class SignUpPresenter {
         self.validation = validation
     }
     
-    public func signUp(viewModel: SignUpViewModel) {
+    public func signUp(viewModel: SignUpRequest) {
         if let message = validation.validate(data: viewModel.toJSON()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Validation failed", message: message))
         } else {
