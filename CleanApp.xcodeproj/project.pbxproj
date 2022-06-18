@@ -31,6 +31,8 @@
 		EB2D59962853EF4F000FF75A /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D59952853EF4F000FF75A /* RemoteAuthenticationFactory.swift */; };
 		EB2D59982853EFBA000FF75A /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D59972853EFBA000FF75A /* LoginControllerFactory.swift */; };
 		EB692B59285E5E6F0083E521 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB692B58285E5E6F0083E521 /* Welcome.storyboard */; };
+		EB692B5C285E64780083E521 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB692B5B285E64780083E521 /* WelcomeViewControllerTests.swift */; };
+		EB692B5E285E65A40083E521 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB692B5D285E65A40083E521 /* WelcomeViewController.swift */; };
 		EB6E2737285293AE00321F14 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E2736285293AE00321F14 /* ApiUrlFactory.swift */; };
 		EB6E273A2852943600321F14 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E27392852943600321F14 /* AlamofireAdapterFactory.swift */; };
 		EB6E273E2852955F00321F14 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E273D2852955F00321F14 /* EmailValidatorAdapterFactory.swift */; };
@@ -378,6 +380,8 @@
 		EB2D59952853EF4F000FF75A /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		EB2D59972853EFBA000FF75A /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		EB692B58285E5E6F0083E521 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		EB692B5B285E64780083E521 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		EB692B5D285E65A40083E521 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EB6E2736285293AE00321F14 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		EB6E27392852943600321F14 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		EB6E273D2852955F00321F14 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
@@ -672,7 +676,16 @@
 		EB692B57285E5E5B0083E521 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				EB692B5D285E65A40083E521 /* WelcomeViewController.swift */,
 				EB692B58285E5E6F0083E521 /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		EB692B5A285E64640083E521 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				EB692B5B285E64780083E521 /* WelcomeViewControllerTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -849,6 +862,7 @@
 		EB99466E284D4869009C1D9E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EB692B5A285E64640083E521 /* Welcome */,
 				EB12DD3E2853E422008EEC57 /* Login */,
 				EB99466C284D4832009C1D9E /* SignUp */,
 			);
@@ -1768,6 +1782,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB692B5E285E65A40083E521 /* WelcomeViewController.swift in Sources */,
 				EB994674284D52FD009C1D9E /* UIViewControllerExtensions.swift in Sources */,
 				EB6E27482852A14E00321F14 /* RoundedTextField.swift in Sources */,
 				EB994666284D3669009C1D9E /* SignUpViewController.swift in Sources */,
@@ -1785,6 +1800,7 @@
 			files = (
 				EB12DD402853E433008EEC57 /* LoginViewControllerTests.swift in Sources */,
 				EB994658284D3301009C1D9E /* SignUpViewControllerTests.swift in Sources */,
+				EB692B5C285E64780083E521 /* WelcomeViewControllerTests.swift in Sources */,
 				EB994671284D48A9009C1D9E /* UITestExtensions.swift in Sources */,
 				EB12DD432853E8CD008EEC57 /* TestExtensions.swift in Sources */,
 			);
