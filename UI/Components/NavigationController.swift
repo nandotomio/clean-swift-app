@@ -2,6 +2,8 @@ import Foundation
 import UIKit
 
 public final class NavigationController: UINavigationController {
+    private var currentViewController: UIViewController?
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -26,9 +28,17 @@ public final class NavigationController: UINavigationController {
     
     public func setRootViewController(viewController: UIViewController) {
         setViewControllers([viewController], animated: true)
+        currentViewController = viewController
+        hideBackButtonText()
     }
     
     public func pushViewController(_ viewController: UIViewController) {
         pushViewController(viewController, animated: true)
+        currentViewController = viewController
+        hideBackButtonText()
+    }
+    
+    public func hideBackButtonText() {
+        currentViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
 }
